@@ -1,36 +1,174 @@
-<div class="display-6 d-flex flex-row  mb-2 bg-light border "> 
-  <div class="me-5">   Employee Manager App </div>
-<a class="ms-5 btn btn-light border "> Add Employee </a>
+<div class="bg-dark">
+
+  <nav class="navbar navbar-expand-md navbar-dark p-2 bg-dark justify-content-between">
+
+    <!-- <button type="button" class="me-0 btn btn-dark text-light border p-2" data-bs-toggle="modal"
+      data-bs-target="#addEmployee"> Add Employee <i class="fa-solid fa-plus"></i>
+    </button> -->
+
+    <div class=" btn btn-dark text-light border p-2" (click)="onOpenModal(null,'add')">Add Employee <i
+        class="fa-solid fa-plus"></i> </div>
+
+    <h4 class="navbar-brand"> Employee Manager App</h4>
+    <form class="form-inline my-2 my-md-0 ">
+      <input class="form-control p-1" type="text" placeholder="Search">
+    </form>
+  </nav>
 
 
-</div>
+  <!-- Add Employee Modal  -->
+  <div class="modal fade  p-5 m-auto" id="addEmployee" tabindex="-1" aria-labelledby="addEmployeeLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content p-3 ">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addEmployeeLabel">Add Employee</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
 
+          <form #addForm="ngForm" (ngSubmit)="onAddEmployee(addForm)">
 
-<div > 
+            <div class="form-group ">
 
-  <div class="container d-flex flex-row flex-wrap justify-content-evenly"> 
+              <label for="name">Name</label>
+              <input type="text" class="form-control" required ngModel name="name" >
+       
+              <label for="email">Email</label>
+              <input type="text" class="form-control" required ngModel name="email" >
 
- <div *ngFor="let employee of employees" class="m-2" >
-    <div class="card" style="width: 12rem;">
-      <img src="{{employee?.imageUrl}}" class="card-img-top" alt="{{employee.name}}">
-      <div class="card-body">
-        <h5 class="card-title">{{employee?.name}}</h5>
-        <p>Email: {{employee?.email}}</p>
-        <p >Job Title: {{employee?.jobTitle}}</p>
-        <p >Is Team: {{employee?.isTeam ? 'Yes' : 'No'}}</p>
+ 
+              <label for="jobTitle">Job Title</label>
+              <input type="text" class="form-control" required ngModel name="jobTitle" >
 
-        <div> <button class="btn  m-1 btn-success">
-          <i class="fa-solid fa-file-pen"></i> </button> 
-          <button class="m-1 btn btn-danger"> 
-            <i class="fa-solid fa-trash"></i></button> 
-          </div>
+              <div class="btn-group d-flex mt-4" role="group" required>
+                <label class="btn btn-team active">
+                  <input type="radio" name="isTeam" value="true" checked> In Team
+                </label>
+                <label class="btn btn-team">
+                  <input type="radio" name="isTeam" value="false"> Not in Team
+                </label>
+              </div>
+              <br>
 
+              <label for="imageUrl">Url Image</label>
+              <input type="text" class="form-control" ngModel name="imageUrl" required >
+
+            </div>
+          </form>
+
+        </div>
+        <div class="mt-3 modal-footer">
+          <button type="button" [disabled]="addForm.invalid" class="mt-2 btn btn-success m-1 p-1">Save</button>
+          <button type="button" class="mt-2 btn btn-danger m-1 p-1" data-bs-dismiss="modal">Cancel</button>
+
+        </div>
       </div>
     </div>
-    </div>
+  </div>
 
+  <!-- Edit Employee modal  -->
+  <div class="modal fade  p-5 m-auto" id="updateEmployee" tabindex="-1" aria-labelledby="updateEmployeeLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content p-3 ">
+        <div class="modal-header">
+          <h5 class="modal-title" id="updateEmployeeLabel">Edit Employee</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+          <form>
+            <div class="form-group ">
+
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="">
+       
+              <label for="email">Email</label>
+              <input type="text" class="form-control" id="email" placeholder="Example input">
+
+ 
+              <label for="jobTitle">Job Title</label>
+              <input type="text" class="form-control" id="jobTitle" placeholder="Example input">
+
+              <label for="isTeam">Is part of the Team ?</label>
+              <select name="isTeam" id="isTeam">
+                <option value="true">yes</option>
+                <option value="false">no</option>
+              </select><br>
+
+              <label for="imageUrl">Url Image</label>
+              <input type="text" class="form-control" id="imageUrl" placeholder="Example input">
+
+            </div>
+          </form>
+
+
+        </div>
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-success m-1 p-1"><i class="fa-solid fa-check"></i></button>
+          <button type="button" class="btn btn-danger m-1 p-1" data-bs-dismiss="modal"><i
+              class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Modal-->
+
+  <div class="modal fade  p-5 m-auto" id="deleteEmployee" tabindex="-1" aria-labelledby="deleteEmployeeLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content p-3 ">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteEmployeeLabel">Delete Employee</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete this employee ? 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success m-1 p-1"><i class="fa-solid fa-check"></i></button>
+          <button type="button" class="btn btn-danger m-1 p-1" data-bs-dismiss="modal"><i
+              class="fa-solid fa-xmark"></i></button>
+
+        </div>
+      </div>
+    </div>
   </div>
 
 
-  
+  <div class="container " id="main">
+    <div class="row justify-content-evenly">
+
+      <div class="col-lg-2 m-2" *ngFor="let employee of employees">
+        <div class="card p-0">
+          <div class="card-image">
+            <img src="{{employee?.imageUrl}}" alt="{{employee.name}}">
+          </div>
+          <div class="card-content d-flex flex-column align-items-center">
+            <h4 class="pt-2 mb-3">{{employee.name}}</h4>
+            <h5>{{employee?.jobTitle}}</h5>
+            <p class="mt-3">{{employee?.email}}</p>
+            <p> Selected ? {{employee?.isTeam ? 'Yes' : 'No'}} </p>
+            <ul class="social-icons d-flex justify-content-center">
+              <li style="--i:1">
+                <div (click)="onOpenModal(employee,'edit')" class="btn p-1 btn-success">
+                  <i class="fa fa-pencil"></i>
+                </div>
+              </li>
+              <li style="--i:2">
+                <div (click)="onOpenModal(employee,'delete')" class="btn p-1 btn-danger">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
 </div>
