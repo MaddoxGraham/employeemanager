@@ -1,27 +1,33 @@
-# Employeemanagerapp
+# Employeemanagerapp _ Angular App 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.3.
+This is the front end of the EmployeeManager Application. This is a One page app that permit to visualize the datas and interact with them. 
+Every action is directly display on the screen. This is the landing page. I will show you here a minimalist demo of how the app works. 
+The Landing page display card of employees. Each of them have a picture. On hover informations are given about this employee : name email etc ... 
 
-## Development server
+<img src="https://raw.githubusercontent.com/MaddoxGraham/employeemanager/main/employeemanagerapp/src/assets/LandingPage.png" /> 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+### Add An Employee 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Let's add our first employee. With a simple click event on the button add Employee this modal will be shown : 
+<img src="https://raw.githubusercontent.com/MaddoxGraham/employeemanager/main/employeemanagerapp/src/assets/AddEmployeeModal.png" /> 
 
-## Build
+Let's put some information about Liara, our new team member. The save button is disabled until everything is filled.
+<img src="https://raw.githubusercontent.com/MaddoxGraham/employeemanager/main/employeemanagerapp/src/assets/validAddEmployeeModal.png" /> 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+At validation, this new employee can be seen with her new collegues. 
+<img src="https://raw.githubusercontent.com/MaddoxGraham/employeemanager/main/employeemanagerapp/src/assets/NewEmployee.png" /> 
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Update An Employee 
 
-## Running end-to-end tests
+<img src="" /> 
+<img src="" /> 
+<img src="" /> 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Delete An Employee 
+<img src="" /> 
+<img src="" /> 
+<img src="" /> 
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Search An Employee 
