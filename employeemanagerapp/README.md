@@ -20,14 +20,21 @@ At validation, this new employee can be seen with her new collegues.
 
 
 ### Update An Employee 
+We've created a new employee : Saren. Unfortunatly we forgot to give him a last name. Let's correct our mistake. On his profil card we will click edit on his card.
+<img src="https://raw.githubusercontent.com/MaddoxGraham/employeemanager/main/employeemanagerapp/src/assets/OneditSaren.png" /> 
 
-<img src="" /> 
-<img src="" /> 
-<img src="" /> 
+His information are already displayed, we can add his last name. 
+<img src="https://raw.githubusercontent.com/MaddoxGraham/employeemanager/main/employeemanagerapp/src/assets/BeforeEditSaren.png" /> <img src="https://raw.githubusercontent.com/MaddoxGraham/employeemanager/main/employeemanagerapp/src/assets/NameEditSaren.png" /> 
+
+After saving the changes, the card display dynamicly the new informations. 
+<img src="https://raw.githubusercontent.com/MaddoxGraham/employeemanager/main/employeemanagerapp/src/assets/SarenCardAfter.png" /> 
 
 ### Delete An Employee 
-<img src="" /> 
-<img src="" /> 
-<img src="" /> 
+Unfortunatly Saren quit the team. We need to delete his card, let click the delete button on his card : 
+<img src="https://github.com/MaddoxGraham/employeemanager/blob/main/employeemanagerapp/src/assets/DeleteModal.png" /> 
+On click, the employee will no longer be in the list on employees.
 
 ### Search An Employee 
+Let's search an employee. His last name is Vakarian.
+<img src="https://raw.githubusercontent.com/MaddoxGraham/employeemanager/main/employeemanagerapp/src/assets/searchFirstLetter.png" /> 
+<img src="https://raw.githubusercontent.com/MaddoxGraham/employeemanager/main/employeemanagerapp/src/assets/searchSecondLetter.png" /> 
