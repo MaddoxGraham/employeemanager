@@ -1,0 +1,16 @@
+INSERT INTO Employee (email, `image_url`, `job_title`, `is_team`, name)
+VALUES ('NormadySR2@gmail.com', 'https://i.pinimg.com/564x/eb/00/cc/eb00cc191be45d77267645bd7bc9ad23.jpg', 'The Fool', 1, 'Jane Shepard');
+INSERT INTO Employee (email, `image_url`, `job_title`, `is_team`, name)
+VALUES ('LastWish@toobroody.com', 'https://i.pinimg.com/564x/d1/cf/ae/d1cfae8baaee7346478d684b49bba362.jpg', 'Temperence', 1, 'Thane Krios');
+INSERT INTO Employee (email, `image_url`, `job_title`, `is_team`, name)
+VALUES ('Archangel@calibration.com', 'https://i.pinimg.com/564x/6f/6c/4e/6f6c4e17800531c914d6c5876606155e.jpg', 'Judgement', 1, 'Garrus Vakarian');
+INSERT INTO Employee (email, `image_url`, `job_title`, `is_team`, name)
+VALUES ('justiciar@glorydays.com', 'https://i.pinimg.com/564x/4d/2c/33/4d2c33256b5f62bb0f7d5caa16fef1f3.jpg', 'Justice', 0, 'Samara T\'serra');
+INSERT INTO Employee (email, `image_url`, `job_title`, `is_team`, name)
+VALUES ('bigbuddy@hotmail.com', 'https://i.pinimg.com/564x/5c/04/e8/5c04e8f62752a2e98ee0b57c8c2a9769.jpg', 'The Empero', 0, 'Wrex Urdnot');
+INSERT INTO Employee (email, `image_url`, `job_title`, `is_team`, name)
+VALUES ('doesthisunit@haveasoul.com', 'https://i.pinimg.com/564x/f7/1d/e0/f71de0fa61c5f2e36069e8571503957a.jpg', 'The Hermit', 0, 'Legion');
+INSERT INTO Employee (email, `image_url`, `job_title`, `is_team`, name)
+VALUES ('mymomwas@complicated.net', 'https://i.pinimg.com/564x/0d/66/f9/0d66f91d1d5b5e6651cbebafba86c27b.jpg', 'The Star', 0, 'Liara T\'Soni');
+INSERT INTO Employee (email, `image_url`, `job_title`, `is_team`, name)
+VALUES ('zero@mail.net', 'https://i.pinimg.com/564x/75/d9/9e/75d99eb9d2f2e3b5e4088ced621a0ef2.jpg', 'The Tower', 0, 'Jack');
