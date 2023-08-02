@@ -1,3 +1,14 @@
+#How to . 
+
+   * Clone repository
+   * modify file application.proprieties (location : src/main/ressources)
+   * create database in phpmyadmin
+   * launch BackEnd
+   * Insert data.
+   * npm install -g @angular/cli
+   * launch FrontEnd
+     
+
 ## Employee Manager Instruction Starter - Notes
 
 1. Using Java JDK / IntelliJ / Spring Boot / Angular / VSCode.
